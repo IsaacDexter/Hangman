@@ -41,8 +41,9 @@ protected virtual void LoadCSV()
 
                 }
             }
+}
 ```
-*The LoadCSV method in the CSVParser class, which handles the files.
+*The LoadCSV method in the CSVParser class, which handles the files.*
 ## Credits
 I would like to thank Manas Sharma and Notmi Namae for releasing a csv dictionary here: https://www.bragitoff.com/2016/03/english-dictionary-in-csv-format/ 
 I would also like to thank user Habeeb for his answer on stack overflow on using the .net csv parser: https://stackoverflow.com/a/33796861
