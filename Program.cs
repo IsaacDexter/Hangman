@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.VisualBasic.FileIO;
 
 
-namespace CNAWeek1
+namespace Hangman
 {
     class CSVParser
     {
@@ -122,7 +122,7 @@ namespace CNAWeek1
     /// b.  I would like to thank Manas Sharma and Notmi Namae for releasing a csv dictionary here: https://www.bragitoff.com/2016/03/english-dictionary-in-csv-format/ <br/>
     /// c.  I would also like to thank user Habeeb for his answer on stack overflow on using the .net csv parser.</para>
     /// </summary>
-    public class Task9
+    public class HangmanGame
     {
         /// <summary>A reference to the csv parser used to load the dictionary csv and then generate a random word.</summary>
         Dictionary dictionary;
@@ -147,7 +147,7 @@ namespace CNAWeek1
             Console.WriteLine("     |         ");
             Console.WriteLine("===============");
         }
-        public Task9()
+        public HangmanGame()
         {
             //Loads the dictionary
             dictionary = new Dictionary("dictionaryDefinitions.csv", 2, '|');
@@ -250,6 +250,18 @@ namespace CNAWeek1
                 Console.WriteLine("Unfortunately, you've lost. Better luck next time!");
             }
             Console.WriteLine("The word was " + word + ".");
+        }
+    }
+
+    //Launch the game in the actual program
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            HangmanGame hangmanGame = new HangmanGame();
+
+            Console.WriteLine("\nPress the enter key to exit...");
+            Console.ReadLine(); //Waits for input. Is only here to prevent the window from closing immidiately.
         }
     }
 }
