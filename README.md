@@ -19,8 +19,8 @@ The game generates its words and descriptions from a delimiter seperated value (
 The class has custom parameters for paths, number of fields and custom delimiter characters.
 '''csharp
 protected virtual void LoadCSV()
-        {
-            using (TextFieldParser csvParser = new TextFieldParser(m_path))
+{
+        using (TextFieldParser csvParser = new TextFieldParser(m_path))
             {
                 csvParser.CommentTokens = new string[] { "#" };
                 csvParser.SetDelimiters(new string[] { m_delimeter.ToString() });
@@ -41,7 +41,6 @@ protected virtual void LoadCSV()
 
                 }
             }
-        }
 '''
 *The LoadCSV method in the CSVParser class, which handles the files.
 ## Credits
